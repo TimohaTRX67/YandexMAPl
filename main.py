@@ -48,9 +48,9 @@ class GameView(arcade.Window):
         if key == arcade.key.S:
             self.move_map('down')
         if key == arcade.key.P:
-            self.adjust_zoom(ZOOMIN)
+            self.zoom(ZOOMIN)
         if key == arcade.key.O:
-            self.adjust_zoom(ZOOMOUT)
+            self.zoom(ZOOMOUT)
         
     def move_map(self, direction: str) -> None:
         if direction == 'left':
