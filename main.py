@@ -26,6 +26,26 @@ class GameView(arcade.Window):
             ),
         )
 
+    def on_key_press(self, key, modifiers):
+        if key == arcade.key.A:
+            self.move_map('left')
+        if key == arcade.key.D:
+            self.move_map('rigth')
+        if key == arcade.key.W:
+            self.move_map('up')
+        if key == arcade.key.S:
+            self.move_map('down')
+        
+    def move_map(self, direction: str) -> None:
+        if direction == 'left':
+            pass
+        if direction == 'right':
+            pass
+        if direction == 'up':
+            pass
+        if direction == 'down':
+            pass
+
     def get_image(self):
         server_address = 'https://static-maps.yandex.ru/v1?'
         api_key = 'f3a0fe3a-b07e-4840-a1da-06f18b2ddf13'
