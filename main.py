@@ -2,9 +2,10 @@ import os
 import sys
 import requests
 import arcade
+import arcade.gui as gui
 
-WINDOW_WIDTH = 600
-WINDOW_HEIGHT = 400
+WINDOW_WIDTH = 1280
+WINDOW_HEIGHT = 720
 WINDOW_TITLE = "MAP"
 MAP_FILE = "map.png"
 MIN = 0.0005
@@ -21,10 +22,40 @@ class GameView(arcade.Window):
         self.spn = [0.002, 0.002]  # Маштаб
         
         self.timer = 0
-        self.theme = "light" 
+        self.theme = "light"
+        self.ui_manager = gui.UIManager()
+        self.search_input = None
+        self.search_button = None
         
     def setup(self):
         self.get_image()
+        self._setup_ui()
+
+    def _setup_ui(self):
+        self.ui_manager.enable()
+        self.ui_manager.clear()
+
+        input_height = 32
+        input_width = 360
+        padding = 10
+
+        self.search_input = gui.UIInputText(
+            x=padding,
+            y=self.height - input_height - padding,
+            width=input_width,
+            height=input_height,
+            text=""
+        )
+        self.search_button = gui.UIFlatButton(
+            text="Искать",
+            x=padding + input_width + 10,
+            y=self.height - input_height - padding,
+            width=100,
+            height=input_height
+        )
+
+        self.ui_manager.add(self.search_input)
+        self.ui_manager.add(self.search_button)
 
     def on_draw(self):
         self.clear()
@@ -38,6 +69,7 @@ class GameView(arcade.Window):
                 self.background.height
             ),
         )
+        self.ui_manager.draw()
 
     def on_key_press(self, key, modifiers):
         if key == arcade.key.T:
