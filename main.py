@@ -67,7 +67,6 @@ class GameView(arcade.Window):
         server_address = 'https://static-maps.yandex.ru/v1?'
         api_key = 'f3a0fe3a-b07e-4840-a1da-06f18b2ddf13'
         ll_spn = f"ll={self.current_position[0]},{self.current_position[1]}&spn={self.spn[0]},{self.spn[1]}"
-        # Готовим запрос.
 
         map_request = f"{server_address}{ll_spn}&apikey={api_key}"
         response = requests.get(map_request)
