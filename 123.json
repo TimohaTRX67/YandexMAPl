@@ -1,0 +1,633 @@
+{
+    "response": {
+        "GeoObjectCollection": {
+            "metaDataProperty": {
+                "GeocoderResponseMetaData": {
+                    "request": "уфа",
+                    "results": "10",
+                    "found": "10"
+                }
+            },
+            "featureMember": [
+                {
+                    "GeoObject": {
+                        "metaDataProperty": {
+                            "GeocoderMetaData": {
+                                "precision": "other",
+                                "text": "Россия, Республика Башкортостан, Уфа",
+                                "kind": "locality",
+                                "Address": {
+                                    "country_code": "RU",
+                                    "formatted": "Россия, Республика Башкортостан, Уфа",
+                                    "Components": [
+                                        {
+                                            "kind": "country",
+                                            "name": "Россия"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Приволжский федеральный округ"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Республика Башкортостан"
+                                        },
+                                        {
+                                            "kind": "area",
+                                            "name": "городской округ Уфа"
+                                        },
+                                        {
+                                            "kind": "locality",
+                                            "name": "Уфа"
+                                        }
+                                    ]
+                                },
+                                "AddressDetails": {
+                                    "Country": {
+                                        "AddressLine": "Россия, Республика Башкортостан, Уфа",
+                                        "CountryNameCode": "RU",
+                                        "CountryName": "Россия",
+                                        "AdministrativeArea": {
+                                            "AdministrativeAreaName": "Республика Башкортостан",
+                                            "SubAdministrativeArea": {
+                                                "SubAdministrativeAreaName": "городской округ Уфа",
+                                                "Locality": {
+                                                    "LocalityName": "Уфа"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "name": "Уфа",
+                        "description": "Республика Башкортостан, Россия",
+                        "boundedBy": {
+                            "Envelope": {
+                                "lowerCorner": "55.778561 54.500719",
+                                "upperCorner": "56.297374 54.960131"
+                            }
+                        },
+                        "uri": "ymapsbm1://geo?data=Cgg1MzEwNTMwORJD0KDQvtGB0YHQuNGPLCDQoNC10YHQv9GD0LHQu9C40LrQsCDQkdCw0YjQutC-0YDRgtC-0YHRgtCw0L0sINCj0YTQsCIKDb7VX0IVy_BaQg,,",
+                        "Point": {
+                            "pos": "55.958736 54.735152"
+                        }
+                    }
+                },
+                {
+                    "GeoObject": {
+                        "metaDataProperty": {
+                            "GeocoderMetaData": {
+                                "precision": "other",
+                                "text": "Россия, река Уфа",
+                                "kind": "hydro",
+                                "Address": {
+                                    "country_code": "RU",
+                                    "formatted": "Россия, река Уфа",
+                                    "Components": [
+                                        {
+                                            "kind": "country",
+                                            "name": "Россия"
+                                        },
+                                        {
+                                            "kind": "hydro",
+                                            "name": "река Уфа"
+                                        }
+                                    ]
+                                },
+                                "AddressDetails": {
+                                    "Country": {
+                                        "AddressLine": "Россия, река Уфа",
+                                        "CountryNameCode": "RU",
+                                        "CountryName": "Россия",
+                                        "Locality": {
+                                            "Premise": {
+                                                "PremiseName": "река Уфа"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "name": "река Уфа",
+                        "description": "Россия",
+                        "boundedBy": {
+                            "Envelope": {
+                                "lowerCorner": "55.98777 54.676548",
+                                "upperCorner": "60.132435 56.653675"
+                            }
+                        },
+                        "uri": "ymapsbm1://geo?data=CgkxNDM2NzQ3NjASHdCg0L7RgdGB0LjRjywg0YDQtdC60LAg0KPRhNCwIgoNNBZnQhV0kWBC",
+                        "Point": {
+                            "pos": "57.77168 56.142044"
+                        }
+                    }
+                },
+                {
+                    "GeoObject": {
+                        "metaDataProperty": {
+                            "GeocoderMetaData": {
+                                "precision": "other",
+                                "text": "Россия, Пермский край, Кунгурский муниципальный округ, деревня Уфа",
+                                "kind": "locality",
+                                "Address": {
+                                    "country_code": "RU",
+                                    "formatted": "Россия, Пермский край, Кунгурский муниципальный округ, деревня Уфа",
+                                    "Components": [
+                                        {
+                                            "kind": "country",
+                                            "name": "Россия"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Приволжский федеральный округ"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Пермский край"
+                                        },
+                                        {
+                                            "kind": "area",
+                                            "name": "Кунгурский муниципальный округ"
+                                        },
+                                        {
+                                            "kind": "locality",
+                                            "name": "деревня Уфа"
+                                        }
+                                    ]
+                                },
+                                "AddressDetails": {
+                                    "Country": {
+                                        "AddressLine": "Россия, Пермский край, Кунгурский муниципальный округ, деревня Уфа",
+                                        "CountryNameCode": "RU",
+                                        "CountryName": "Россия",
+                                        "AdministrativeArea": {
+                                            "AdministrativeAreaName": "Пермский край",
+                                            "SubAdministrativeArea": {
+                                                "SubAdministrativeAreaName": "Кунгурский муниципальный округ",
+                                                "Locality": {
+                                                    "LocalityName": "деревня Уфа"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "name": "деревня Уфа",
+                        "description": "Кунгурский муниципальный округ, Пермский край, Россия",
+                        "boundedBy": {
+                            "Envelope": {
+                                "lowerCorner": "56.775269 57.521024",
+                                "upperCorner": "56.785608 57.527829"
+                            }
+                        },
+                        "uri": "ymapsbm1://geo?data=Cgg1MzA5NDEzMBJ60KDQvtGB0YHQuNGPLCDQn9C10YDQvNGB0LrQuNC5INC60YDQsNC5LCDQmtGD0L3Qs9GD0YDRgdC60LjQuSDQvNGD0L3QuNGG0LjQv9Cw0LvRjNC90YvQuSDQvtC60YDRg9CzLCDQtNC10YDQtdCy0L3RjyDQo9GE0LAiCg3zH2NCFcEYZkI,",
+                        "Point": {
+                            "pos": "56.781198 57.524175"
+                        }
+                    }
+                },
+                {
+                    "GeoObject": {
+                        "metaDataProperty": {
+                            "GeocoderMetaData": {
+                                "precision": "other",
+                                "text": "Россия, Республика Башкортостан, аэропорт Уфа имени Мустая Карима",
+                                "kind": "airport",
+                                "Address": {
+                                    "country_code": "RU",
+                                    "formatted": "Россия, Республика Башкортостан, аэропорт Уфа имени Мустая Карима",
+                                    "Components": [
+                                        {
+                                            "kind": "country",
+                                            "name": "Россия"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Приволжский федеральный округ"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Республика Башкортостан"
+                                        },
+                                        {
+                                            "kind": "airport",
+                                            "name": "аэропорт Уфа имени Мустая Карима"
+                                        }
+                                    ]
+                                },
+                                "AddressDetails": {
+                                    "Country": {
+                                        "AddressLine": "Россия, Республика Башкортостан, аэропорт Уфа имени Мустая Карима",
+                                        "CountryNameCode": "RU",
+                                        "CountryName": "Россия",
+                                        "AdministrativeArea": {
+                                            "AdministrativeAreaName": "Республика Башкортостан",
+                                            "Locality": {
+                                                "DependentLocality": {
+                                                    "DependentLocalityName": "аэропорт Уфа имени Мустая Карима"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "name": "аэропорт Уфа имени Мустая Карима",
+                        "description": "Республика Башкортостан, Россия",
+                        "boundedBy": {
+                            "Envelope": {
+                                "lowerCorner": "55.844165 54.530781",
+                                "upperCorner": "55.907703 54.577304"
+                            }
+                        },
+                        "uri": "ymapsbm1://geo?data=CgkxMDAwOTE2MjQSedCg0L7RgdGB0LjRjywg0KDQtdGB0L_Rg9Cx0LvQuNC60LAg0JHQsNGI0LrQvtGA0YLQvtGB0YLQsNC9LCDQsNGN0YDQvtC_0L7RgNGCINCj0YTQsCDQuNC80LXQvdC4INCc0YPRgdGC0LDRjyDQmtCw0YDQuNC80LAiCg3WiF9CFdNDWkI,",
+                        "Point": {
+                            "pos": "55.883628 54.566235"
+                        }
+                    }
+                },
+                {
+                    "GeoObject": {
+                        "metaDataProperty": {
+                            "GeocoderMetaData": {
+                                "precision": "other",
+                                "text": "Россия, Республика Башкортостан, Белорецкий район, Инзерский сельсовет, Гора Уфа",
+                                "kind": "other",
+                                "Address": {
+                                    "country_code": "RU",
+                                    "formatted": "Россия, Республика Башкортостан, Белорецкий район, Инзерский сельсовет, Гора Уфа",
+                                    "Components": [
+                                        {
+                                            "kind": "country",
+                                            "name": "Россия"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Приволжский федеральный округ"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Республика Башкортостан"
+                                        },
+                                        {
+                                            "kind": "area",
+                                            "name": "Белорецкий район"
+                                        },
+                                        {
+                                            "kind": "area",
+                                            "name": "Инзерский сельсовет"
+                                        },
+                                        {
+                                            "kind": "other",
+                                            "name": "Гора Уфа"
+                                        }
+                                    ]
+                                },
+                                "AddressDetails": {
+                                    "Country": {
+                                        "AddressLine": "Россия, Республика Башкортостан, Белорецкий район, Инзерский сельсовет, Гора Уфа",
+                                        "CountryNameCode": "RU",
+                                        "CountryName": "Россия",
+                                        "AdministrativeArea": {
+                                            "AdministrativeAreaName": "Республика Башкортостан",
+                                            "SubAdministrativeArea": {
+                                                "SubAdministrativeAreaName": "Белорецкий район",
+                                                "Locality": {
+                                                    "Premise": {
+                                                        "PremiseName": "Гора Уфа"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "name": "Гора Уфа",
+                        "description": "Инзерский сельсовет, Белорецкий район, Республика Башкортостан, Россия",
+                        "boundedBy": {
+                            "Envelope": {
+                                "lowerCorner": "57.633025 54.085657",
+                                "upperCorner": "57.698907 54.124373"
+                            }
+                        },
+                        "uri": "ymapsbm1://geo?data=CgoyMDI3MTY0NTk2EpQB0KDQvtGB0YHQuNGPLCDQoNC10YHQv9GD0LHQu9C40LrQsCDQkdCw0YjQutC-0YDRgtC-0YHRgtCw0L0sINCR0LXQu9C-0YDQtdGG0LrQuNC5INGA0LDQudC-0L0sINCY0L3Qt9C10YDRgdC60LjQuSDRgdC10LvRjNGB0L7QstC10YIsINCT0L7RgNCwINCj0YTQsCIKDfOpZkIVi2tYQg,,",
+                        "Point": {
+                            "pos": "57.665966 54.105019"
+                        }
+                    }
+                },
+                {
+                    "GeoObject": {
+                        "metaDataProperty": {
+                            "GeocoderMetaData": {
+                                "precision": "other",
+                                "text": "Россия, Сахалинская область, Холмский городской округ, Гора Уфа 691 метр",
+                                "kind": "other",
+                                "Address": {
+                                    "country_code": "RU",
+                                    "formatted": "Россия, Сахалинская область, Холмский городской округ, Гора Уфа 691 метр",
+                                    "Components": [
+                                        {
+                                            "kind": "country",
+                                            "name": "Россия"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Дальневосточный федеральный округ"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Сахалинская область"
+                                        },
+                                        {
+                                            "kind": "area",
+                                            "name": "Холмский городской округ"
+                                        },
+                                        {
+                                            "kind": "other",
+                                            "name": "Гора Уфа 691 метр"
+                                        }
+                                    ]
+                                },
+                                "AddressDetails": {
+                                    "Country": {
+                                        "AddressLine": "Россия, Сахалинская область, Холмский городской округ, Гора Уфа 691 метр",
+                                        "CountryNameCode": "RU",
+                                        "CountryName": "Россия",
+                                        "AdministrativeArea": {
+                                            "AdministrativeAreaName": "Сахалинская область",
+                                            "SubAdministrativeArea": {
+                                                "SubAdministrativeAreaName": "Холмский городской округ",
+                                                "Locality": {
+                                                    "Premise": {
+                                                        "PremiseName": "Гора Уфа 691 метр"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "name": "Гора Уфа 691 метр",
+                        "description": "Холмский городской округ, Сахалинская область, Россия",
+                        "boundedBy": {
+                            "Envelope": {
+                                "lowerCorner": "142.47637 47.062424",
+                                "upperCorner": "142.542253 47.107425"
+                            }
+                        },
+                        "uri": "ymapsbm1://geo?data=Cgo2MjI0MTA3MTc5EoEB0KDQvtGB0YHQuNGPLCDQodCw0YXQsNC70LjQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCDQpdC-0LvQvNGB0LrQuNC5INCz0L7RgNC-0LTRgdC60L7QuSDQvtC60YDRg9CzLCDQk9C-0YDQsCDQo9GE0LAgNjkxINC80LXRgtGAIgoNYoIOQxX4VjxC",
+                        "Point": {
+                            "pos": "142.509312 47.084929"
+                        }
+                    }
+                },
+                {
+                    "GeoObject": {
+                        "metaDataProperty": {
+                            "GeocoderMetaData": {
+                                "precision": "other",
+                                "text": "Россия, Хабаровский край, межселенные территории Комсомольского муниципального района, река Уфа",
+                                "kind": "hydro",
+                                "Address": {
+                                    "country_code": "RU",
+                                    "formatted": "Россия, Хабаровский край, межселенные территории Комсомольского муниципального района, река Уфа",
+                                    "Components": [
+                                        {
+                                            "kind": "country",
+                                            "name": "Россия"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Дальневосточный федеральный округ"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Хабаровский край"
+                                        },
+                                        {
+                                            "kind": "area",
+                                            "name": "Комсомольский район"
+                                        },
+                                        {
+                                            "kind": "area",
+                                            "name": "межселенные территории Комсомольского муниципального района"
+                                        },
+                                        {
+                                            "kind": "hydro",
+                                            "name": "река Уфа"
+                                        }
+                                    ]
+                                },
+                                "AddressDetails": {
+                                    "Country": {
+                                        "AddressLine": "Россия, Хабаровский край, межселенные территории Комсомольского муниципального района, река Уфа",
+                                        "CountryNameCode": "RU",
+                                        "CountryName": "Россия",
+                                        "AdministrativeArea": {
+                                            "AdministrativeAreaName": "Хабаровский край",
+                                            "SubAdministrativeArea": {
+                                                "SubAdministrativeAreaName": "Комсомольский район",
+                                                "Locality": {
+                                                    "Premise": {
+                                                        "PremiseName": "река Уфа"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "name": "река Уфа",
+                        "description": "межселенные территории Комсомольского муниципального района, Хабаровский край, Россия",
+                        "boundedBy": {
+                            "Envelope": {
+                                "lowerCorner": "137.321855 50.177955",
+                                "upperCorner": "137.359126 50.209672"
+                            }
+                        },
+                        "uri": "ymapsbm1://geo?data=CgkxNTA4NzQ3OTMSsgHQoNC-0YHRgdC40Y8sINCl0LDQsdCw0YDQvtCy0YHQutC40Lkg0LrRgNCw0LksINC80LXQttGB0LXQu9C10L3QvdGL0LUg0YLQtdGA0YDQuNGC0L7RgNC40Lgg0JrQvtC80YHQvtC80L7Qu9GM0YHQutC-0LPQviDQvNGD0L3QuNGG0LjQv9Cw0LvRjNC90L7Qs9C-INGA0LDQudC-0L3QsCwg0YDQtdC60LAg0KPRhNCwIgoNq1YJQxUEw0hC",
+                        "Point": {
+                            "pos": "137.338546 50.190442"
+                        }
+                    }
+                },
+                {
+                    "GeoObject": {
+                        "metaDataProperty": {
+                            "GeocoderMetaData": {
+                                "precision": "other",
+                                "text": "Россия, Тюменская область, Вагайский муниципальный округ, деревня Уфа",
+                                "kind": "locality",
+                                "Address": {
+                                    "country_code": "RU",
+                                    "formatted": "Россия, Тюменская область, Вагайский муниципальный округ, деревня Уфа",
+                                    "Components": [
+                                        {
+                                            "kind": "country",
+                                            "name": "Россия"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Уральский федеральный округ"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Тюменская область"
+                                        },
+                                        {
+                                            "kind": "area",
+                                            "name": "Вагайский муниципальный округ"
+                                        },
+                                        {
+                                            "kind": "locality",
+                                            "name": "деревня Уфа"
+                                        }
+                                    ]
+                                },
+                                "AddressDetails": {
+                                    "Country": {
+                                        "AddressLine": "Россия, Тюменская область, Вагайский муниципальный округ, деревня Уфа",
+                                        "CountryNameCode": "RU",
+                                        "CountryName": "Россия",
+                                        "AdministrativeArea": {
+                                            "AdministrativeAreaName": "Тюменская область",
+                                            "SubAdministrativeArea": {
+                                                "SubAdministrativeAreaName": "Вагайский муниципальный округ",
+                                                "Locality": {
+                                                    "LocalityName": "деревня Уфа"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "name": "деревня Уфа",
+                        "description": "Вагайский муниципальный округ, Тюменская область, Россия",
+                        "boundedBy": {
+                            "Envelope": {
+                                "lowerCorner": "68.755013 57.949846",
+                                "upperCorner": "68.7621 57.951785"
+                            }
+                        },
+                        "uri": "ymapsbm1://geo?data=Cgg1MzE1ODE0NBKAAdCg0L7RgdGB0LjRjywg0KLRjtC80LXQvdGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCDQktCw0LPQsNC50YHQutC40Lkg0LzRg9C90LjRhtC40L_QsNC70YzQvdGL0Lkg0L7QutGA0YPQsywg0LTQtdGA0LXQstC90Y8g0KPRhNCwIgoNKYSJQhWyzWdC",
+                        "Point": {
+                            "pos": "68.75813 57.950872"
+                        }
+                    }
+                },
+                {
+                    "GeoObject": {
+                        "metaDataProperty": {
+                            "GeocoderMetaData": {
+                                "precision": "street",
+                                "text": "Россия, Р-240",
+                                "kind": "street",
+                                "Address": {
+                                    "country_code": "RU",
+                                    "formatted": "Россия, Р-240",
+                                    "Components": [
+                                        {
+                                            "kind": "country",
+                                            "name": "Россия"
+                                        },
+                                        {
+                                            "kind": "street",
+                                            "name": "Р-240"
+                                        }
+                                    ]
+                                },
+                                "AddressDetails": {
+                                    "Country": {
+                                        "AddressLine": "Россия, Р-240",
+                                        "CountryNameCode": "RU",
+                                        "CountryName": "Россия",
+                                        "Thoroughfare": {
+                                            "ThoroughfareName": "Р-240"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "name": "Р-240",
+                        "description": "Россия",
+                        "boundedBy": {
+                            "Envelope": {
+                                "lowerCorner": "55.289572 52.175771",
+                                "upperCorner": "55.9451 54.650542"
+                            }
+                        },
+                        "uri": "ymapsbm1://geo?data=Cgc4MDIxMTgwEhTQoNC-0YHRgdC40Y8sINCgLTI0MCIKDRBZX0IVGKNVQg,,",
+                        "Point": {
+                            "pos": "55.836978 53.409273"
+                        }
+                    }
+                },
+                {
+                    "GeoObject": {
+                        "metaDataProperty": {
+                            "GeocoderMetaData": {
+                                "precision": "other",
+                                "text": "Россия, Республика Башкортостан, Уфимский район",
+                                "kind": "area",
+                                "Address": {
+                                    "country_code": "RU",
+                                    "formatted": "Россия, Республика Башкортостан, Уфимский район",
+                                    "Components": [
+                                        {
+                                            "kind": "country",
+                                            "name": "Россия"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Приволжский федеральный округ"
+                                        },
+                                        {
+                                            "kind": "province",
+                                            "name": "Республика Башкортостан"
+                                        },
+                                        {
+                                            "kind": "area",
+                                            "name": "Уфимский район"
+                                        }
+                                    ]
+                                },
+                                "AddressDetails": {
+                                    "Country": {
+                                        "AddressLine": "Россия, Республика Башкортостан, Уфимский район",
+                                        "CountryNameCode": "RU",
+                                        "CountryName": "Россия",
+                                        "AdministrativeArea": {
+                                            "AdministrativeAreaName": "Республика Башкортостан",
+                                            "SubAdministrativeArea": {
+                                                "SubAdministrativeAreaName": "Уфимский район"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "name": "Уфимский район",
+                        "description": "Республика Башкортостан, Россия",
+                        "boundedBy": {
+                            "Envelope": {
+                                "lowerCorner": "55.319423 54.44711",
+                                "upperCorner": "56.379201 54.994409"
+                            }
+                        },
+                        "uri": "ymapsbm1://geo?data=Cgg1MzAwMTQ5NBJY0KDQvtGB0YHQuNGPLCDQoNC10YHQv9GD0LHQu9C40LrQsCDQkdCw0YjQutC-0YDRgtC-0YHRgtCw0L0sINCj0YTQuNC80YHQutC40Lkg0YDQsNC50L7QvSIKDR_7XkIVnOVaQg,,",
+                        "Point": {
+                            "pos": "55.745233 54.724229"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

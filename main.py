@@ -28,8 +28,8 @@ class GameView(arcade.Window):
         self.search_button = None
         
     def setup(self):
-        self.get_image()
         self.setup_ui()
+        self.get_image()
 
     def setup_ui(self):
         self.ui_manager.enable()
@@ -53,6 +53,7 @@ class GameView(arcade.Window):
             width=100,
             height=input_height
         )
+        self.search_button.on_click = self.find_coords
 
         self.ui_manager.add(self.search_input)
         self.ui_manager.add(self.search_button)
@@ -134,6 +135,27 @@ class GameView(arcade.Window):
         self.spn[0] = xx
         self.spn[1] = yy
         self.get_image()
+
+    def find_coords(self, event) -> None:
+        """ Ищем координаты запроса """
+        geocode = self.search_input.text
+        server_address = 'http://geocode-maps.yandex.ru/1.x/?'
+        api_key = '8013b162-6b42-4997-9691-77b7074026e0'
+        geocoder_request = f'{server_address}apikey={api_key}&geocode={geocode}&format=json'
+        response = requests.get(geocoder_request)
+        json_response = response.json()
+        
+        data = json_response['response']['GeoObjectCollection']['featureMember'][0]['GeoObject']['Point']['pos']
+        # data = list(map(lambda x: float(str(x)), data.split(data)))
+        if response:
+            # Запрос успешно выполнен, печатаем полученные данные.
+            print(data)
+        else:
+            # Произошла ошибка выполнения запроса. Обрабатываем http-статус.
+            print("Ошибка выполнения запроса:")
+            print(geocoder_request)
+            print("Http статус:", response.status_code, "(", response.reason, ")")
+
 
 def main():
     gameview = GameView(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE)
