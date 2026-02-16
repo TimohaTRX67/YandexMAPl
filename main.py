@@ -40,6 +40,14 @@ class GameView(arcade.Window):
         )
 
     def on_key_press(self, key, modifiers):
+        if key == arcade.key.T:
+            if self.theme == "light":
+                self.theme = "dark"
+            else:
+                self.theme = "light"
+
+            print(f"Текущая тема: {self.theme}")
+            self.get_image()
         if key == arcade.key.A:
             self.move_map('left')
         if key == arcade.key.D:
