@@ -15,8 +15,16 @@ class GameView(arcade.Window):
         self.current_position = [37.530887, 55.703118]
         self.speed = 0.0001  # Скорость передвижения карты
         
+        self.timer = 0
+        
     def setup(self):
         self.get_image()
+
+    def on_update(self, delta_time):
+        self.timer += delta_time
+        if self.timer >= 1:
+            self.get_image()
+            self.timer = 0
 
     def on_draw(self):
         self.clear()
@@ -40,6 +48,7 @@ class GameView(arcade.Window):
             self.move_map('up')
         if key == arcade.key.S:
             self.move_map('down')
+        # self.get_image()
         
     def move_map(self, direction: str) -> None:
         if direction == 'left':
@@ -50,7 +59,6 @@ class GameView(arcade.Window):
             self.current_position[1] += self.speed
         if direction == 'down':
             self.current_position[1] -= self.speed
-        self.get_image()
 
     def get_image(self):
         server_address = 'https://static-maps.yandex.ru/v1?'
