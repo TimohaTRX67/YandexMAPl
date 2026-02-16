@@ -17,19 +17,13 @@ class GameView(arcade.Window):
     def __init__(self, width = 1280, height = 720, title = "Arcade Window"):
         super().__init__(width, height, title, center_window=True)
         self.current_position = [37.530887, 55.703118]
-        self.speed = 0.0001  # Скорость передвижения карты
+        self.speed = 0.0005  # Скорость передвижения карты
         self.spn = [0.002, 0.002]  # Маштаб
         
         self.timer = 0
         
     def setup(self):
         self.get_image()
-
-    def on_update(self, delta_time):
-        self.timer += delta_time
-        if self.timer >= 1:
-            self.get_image()
-            self.timer = 0
 
     def on_draw(self):
         self.clear()
@@ -48,12 +42,15 @@ class GameView(arcade.Window):
         if key == arcade.key.A:
             self.move_map('left')
         if key == arcade.key.D:
-            self.move_map('rigth')
+            self.move_map('right')
         if key == arcade.key.W:
             self.move_map('up')
         if key == arcade.key.S:
             self.move_map('down')
-        # self.get_image()
+        if key == arcade.key.P:
+            self.adjust_zoom(ZOOMIN)
+        if key == arcade.key.O:
+            self.adjust_zoom(ZOOMOUT)
         
     def move_map(self, direction: str) -> None:
         if direction == 'left':
@@ -64,6 +61,7 @@ class GameView(arcade.Window):
             self.current_position[1] += self.speed
         if direction == 'down':
             self.current_position[1] -= self.speed
+        self.get_image()
 
     def get_image(self):
         server_address = 'https://static-maps.yandex.ru/v1?'
@@ -95,12 +93,6 @@ class GameView(arcade.Window):
         self.spn[0] = xx
         self.spn[1] = yy
         self.get_image()
-
-    def on_key_press(self, key, k):
-        if key == arcade.key.P:
-            self.adjust_zoom(ZOOMIN)
-        elif key == arcade.key.O:
-            self.adjust_zoom(ZOOMOUT)
 
 
 def main():
