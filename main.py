@@ -26,6 +26,7 @@ class GameView(arcade.Window):
         self.ui_manager = gui.UIManager()
         self.search_input = None
         self.search_button = None
+        self.marker_point = None
         
     def setup(self):
         self.setup_ui()
@@ -106,18 +107,22 @@ class GameView(arcade.Window):
         self.get_image()
 
     def get_image(self):
-        server_address = 'https://static-maps.yandex.ru/v1?'
+        server_address = 'https://static-maps.yandex.ru/v1'
         api_key = 'f3a0fe3a-b07e-4840-a1da-06f18b2ddf13'
-        ll_spn = f"ll={self.current_position[0]},{self.current_position[1]}&spn={self.spn[0]},{self.spn[1]}"
+        map_params = {
+            "ll": f"{self.current_position[0]},{self.current_position[1]}",
+            "spn": f"{self.spn[0]},{self.spn[1]}",
+            "apikey": api_key,
+            "theme": self.theme,
+        }
+        if self.marker_point:
+            map_params["pt"] = f"{self.marker_point},pm2rdm"
 
-        theme_param = f"&theme={self.theme}"
-
-        map_request = f"{server_address}{ll_spn}&apikey={api_key}{theme_param}"
-        response = requests.get(map_request)
+        response = requests.get(server_address, params=map_params)
 
         if not response:
             print("Ошибка выполнения запроса:")
-            print(map_request)
+            print(response.url)
             print("Http статус:", response.status_code, "(", response.reason, ")")
             sys.exit(1)
             
@@ -138,23 +143,29 @@ class GameView(arcade.Window):
 
     def find_coords(self, event) -> None:
         """ Ищем координаты запроса """
-        geocode = self.search_input.text
-        server_address = 'http://geocode-maps.yandex.ru/1.x/?'
+        geocode = self.search_input.text.strip()
+        server_address = 'https://geocode-maps.yandex.ru/1.x/?'
         api_key = '8013b162-6b42-4997-9691-77b7074026e0'
         geocoder_request = f'{server_address}apikey={api_key}&geocode={geocode}&format=json'
         response = requests.get(geocoder_request)
-        json_response = response.json()
-        
-        data = json_response['response']['GeoObjectCollection']['featureMember'][0]['GeoObject']['Point']['pos']
-        # data = list(map(lambda x: float(str(x)), data.split(data)))
-        if response:
-            # Запрос успешно выполнен, печатаем полученные данные.
-            print(data)
-        else:
-            # Произошла ошибка выполнения запроса. Обрабатываем http-статус.
+        if not response:
             print("Ошибка выполнения запроса:")
             print(geocoder_request)
             print("Http статус:", response.status_code, "(", response.reason, ")")
+            return
+
+        json_response = response.json()
+
+        try:
+            data = json_response['response']['GeoObjectCollection']['featureMember'][0]['GeoObject']['Point']['pos']
+        except (KeyError, IndexError):
+            print("Ничего не найдено по запросу.")
+            return
+
+        lon_str, lat_str = data.split()
+        self.current_position = [float(lon_str), float(lat_str)]
+        self.marker_point = f"{lon_str},{lat_str}"
+        self.get_image()
 
 
 def main():
