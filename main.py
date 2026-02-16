@@ -3,8 +3,8 @@ import sys
 import requests
 import arcade
 
-WINDOW_WIDTH = 600
-WINDOW_HEIGHT = 400
+WINDOW_WIDTH = 1280
+WINDOW_HEIGHT = 720
 WINDOW_TITLE = "MAP"
 MAP_FILE = "map.png"
 MIN = 0.0005
