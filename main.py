@@ -21,6 +21,7 @@ class GameView(arcade.Window):
         self.spn = [0.002, 0.002]  # Маштаб
         
         self.timer = 0
+        self.theme = "light" 
         
     def setup(self):
         self.get_image()
@@ -39,6 +40,14 @@ class GameView(arcade.Window):
         )
 
     def on_key_press(self, key, modifiers):
+        if key == arcade.key.T:
+            if self.theme == "light":
+                self.theme = "dark"
+            else:
+                self.theme = "light"
+
+            print(f"Текущая тема: {self.theme}")
+            self.get_image()
         if key == arcade.key.A:
             self.move_map('left')
         if key == arcade.key.D:
@@ -68,7 +77,9 @@ class GameView(arcade.Window):
         api_key = 'f3a0fe3a-b07e-4840-a1da-06f18b2ddf13'
         ll_spn = f"ll={self.current_position[0]},{self.current_position[1]}&spn={self.spn[0]},{self.spn[1]}"
 
-        map_request = f"{server_address}{ll_spn}&apikey={api_key}"
+        theme_param = f"&theme={self.theme}"
+
+        map_request = f"{server_address}{ll_spn}&apikey={api_key}{theme_param}"
         response = requests.get(map_request)
 
         if not response:
