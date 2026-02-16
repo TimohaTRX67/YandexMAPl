@@ -8,7 +8,7 @@ WINDOW_HEIGHT = 400
 WINDOW_TITLE = "MAP"
 MAP_FILE = "map.png"
 MIN = 0.0005
-MAX = 0.05
+MAX = 1
 ZOOMIN = 0.5
 ZOOMOUT = 2.0
 
@@ -45,16 +45,15 @@ class GameView(arcade.Window):
             print(map_request)
             print("Http статус:", response.status_code, "(", response.reason, ")")
             sys.exit(1)
-
-        # Запишем полученное изображение в файл.
+            
         with open(MAP_FILE, "wb") as file:
             file.write(response.content)
 
         self.background = arcade.load_texture(MAP_FILE)
 
-    def adjust_zoom(self, factor):
-        new_spn_x = self.spn[0] * factor
-        new_spn_y = self.spn[1] * factor
+    def zoom(self, k):
+        new_spn_x = self.spn[0] * k
+        new_spn_y = self.spn[1] * k
         xx = max(MIN, min(MAX, new_spn_x))
         yy = max(MIN, min(MAX, new_spn_y))
 
@@ -64,9 +63,9 @@ class GameView(arcade.Window):
 
     def on_key_press(self, key, k):
         if key == arcade.key.P:
-            self.adjust_zoom(ZOOMIN)
+            self.zoom(ZOOMIN)
         elif key == arcade.key.O:
-            self.adjust_zoom(ZOOMOUT)
+            self.zoom(ZOOMOUT)
 
 
 def main():
