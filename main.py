@@ -2,6 +2,7 @@ import os
 import sys
 import requests
 import arcade
+import arcade.gui as gui
 
 WINDOW_WIDTH = 1280
 WINDOW_HEIGHT = 720
@@ -21,10 +22,40 @@ class GameView(arcade.Window):
         self.spn = [0.002, 0.002]  # Маштаб
         
         self.timer = 0
-        self.theme = "light" 
+        self.theme = "light"
+        self.ui_manager = gui.UIManager()
+        self.search_input = None
+        self.search_button = None
         
     def setup(self):
         self.get_image()
+        self.setup_ui()
+
+    def setup_ui(self):
+        self.ui_manager.enable()
+        self.ui_manager.clear()
+
+        input_height = 32
+        input_width = 360
+        padding = 10
+
+        self.search_input = gui.UIInputText(
+            x=padding,
+            y=self.height - input_height - padding,
+            width=input_width,
+            height=input_height,
+            text=""
+        )
+        self.search_button = gui.UIFlatButton(
+            text="Искать",
+            x=padding + input_width + 10,
+            y=self.height - input_height - padding,
+            width=100,
+            height=input_height
+        )
+
+        self.ui_manager.add(self.search_input)
+        self.ui_manager.add(self.search_button)
 
     def on_draw(self):
         self.clear()
@@ -38,6 +69,7 @@ class GameView(arcade.Window):
                 self.background.height
             ),
         )
+        self.ui_manager.draw()
 
     def on_key_press(self, key, modifiers):
         if key == arcade.key.T:
@@ -76,7 +108,6 @@ class GameView(arcade.Window):
         server_address = 'https://static-maps.yandex.ru/v1?'
         api_key = 'f3a0fe3a-b07e-4840-a1da-06f18b2ddf13'
         ll_spn = f"ll={self.current_position[0]},{self.current_position[1]}&spn={self.spn[0]},{self.spn[1]}"
-        # Готовим запрос.
 
         theme_param = f"&theme={self.theme}"
 
