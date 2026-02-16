@@ -55,14 +55,11 @@ class GameView(arcade.Window):
     def adjust_zoom(self, factor):
         new_spn_x = self.spn[0] * factor
         new_spn_y = self.spn[1] * factor
-        clamped_x = max(MIN, min(MAX, new_spn_x))
-        clamped_y = max(MIN, min(MAX, new_spn_y))
+        xx = max(MIN, min(MAX, new_spn_x))
+        yy = max(MIN, min(MAX, new_spn_y))
 
-        if clamped_x == self.spn[0] and clamped_y == self.spn[1]:
-            return
-
-        self.spn[0] = clamped_x
-        self.spn[1] = clamped_y
+        self.spn[0] = xx
+        self.spn[1] = yy
         self.get_image()
 
     def on_key_press(self, key, k):
