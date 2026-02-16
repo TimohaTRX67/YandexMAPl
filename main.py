@@ -29,9 +29,9 @@ class GameView(arcade.Window):
         
     def setup(self):
         self.get_image()
-        self._setup_ui()
+        self.setup_ui()
 
-    def _setup_ui(self):
+    def setup_ui(self):
         self.ui_manager.enable()
         self.ui_manager.clear()
 
